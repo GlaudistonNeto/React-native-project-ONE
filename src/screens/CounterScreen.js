@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 const CountScreen = () => {
   const [state, dispatch] = useReducer(reducer, { count: 0 })
   return (
-<View> 
+<View style={styles.viewStyle}> 
   <Button 
   title="Increase" 
   onPress={() => {
@@ -36,6 +36,10 @@ const CountScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  viewStyle: {
+    alignItems: 'center' // the position of box related to the content
+   },
+});
 
 export default CountScreen;

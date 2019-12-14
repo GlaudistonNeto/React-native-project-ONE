@@ -5,7 +5,7 @@ const ComponentsScreen = () => {
 const name = 'Spk';
 
 return (
-  <View>
+  <View style={styles.StyleSheet}>
     <Text style={ styles.textStyle }>Getting started with React Native</Text>
 <Text style={ styles.subHeaderStyle }>My name is { name }</Text>
   </View>
@@ -13,6 +13,9 @@ return (
 };
 
 const styles = StyleSheet.create({
+  viewStyle: {
+    alignItems: 'center'
+  },
   textStyle: {
     fontSize: 30
   },

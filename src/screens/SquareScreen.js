@@ -31,7 +31,7 @@ const SquareScreen = () => {
   const { red, green, blue } = state;
 
   return (
-  <View>
+  <View style={styles.StyleSheet}>
     <ColorCounter
     onIncrease={() => dispatch({ type: 'change_red', payload: COLOR_INCREMENT })}
     onDecrease={() => dispatch({ type: 'change_red', payload: -1 * COLOR_INCREMENT })}
@@ -55,6 +55,10 @@ const SquareScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  viewStyle: {
+    alignItems: 'center' // the position of box related to the content
+   }
+});
 
 export default SquareScreen;

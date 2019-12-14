@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import ImageDetail from '../components/ImageDetail'
 
 const ImageScreen = () => {
-  return (<View>
+  return (<View style={styles.viewStyle}>
     <ImageDetail 
       title="Forest"
       imageSource={ require('../../assets/forest.jpg') }
@@ -22,6 +22,10 @@ const ImageScreen = () => {
   </View>);
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  viewStyle: {
+    alignItems: 'center' // the position of box related to the content
+   }
+});
 
 export default ImageScreen;

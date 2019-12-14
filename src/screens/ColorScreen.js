@@ -5,7 +5,7 @@ const ColorScreen = () => {
 const [colors, setColors] = useState([]);
 
   return (
-    <View>
+    <View style={styles.StyleSheet}>
       <Button 
       title="Add a Color" 
       onPress={() => {
@@ -31,6 +31,10 @@ const randomRgb = () => {
   return `rgb(${red}, ${green}, ${blue})`;
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  viewStyle: {
+    alignItems: 'center' // the position of box related to the content
+   },  
+});
 
 export default ColorScreen;
